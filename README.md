@@ -6,5 +6,7 @@ Requires:
     - GNU stow
 
 Installation:
+
     - clone into ~/
+
     - Run `stow .`
