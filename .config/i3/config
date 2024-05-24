@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Fira Code 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -219,7 +219,8 @@ no_focus [class="plasmashell" window_type="notification"]
 for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 
 # Background
-exec --no-startup-id feh --bg-scale -Z ~/Pictures/liswall.jpg
+exec --no-startup-id feh --bg-fill -Z ~/Pictures/wallpapers/liswall.jpg
+#exec --no-startup-id nitrogen --restore
 
 # Trasparency
 exec_always --no-startup-id picom -bc

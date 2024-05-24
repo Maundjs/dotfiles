@@ -25,6 +25,8 @@ return {
 			mods = 'CTRL',
 			action = wezterm.action.ToggleFullScreen,
 		},
+        { key = 'PageUp', mods = 'SHIFT', action = wezterm.action.ScrollByPage(-0.5) },
+        { key = 'PageDown', mods = 'SHIFT', action = wezterm.action.ScrollByPage(0.5) },
 	},
 	mouse_bindings = {
 	  -- Ctrl-click will open the link under the mouse cursor
@@ -39,7 +41,7 @@ return {
     audible_bell = 'Disabled',
 
     -- scroll options 
-    -- enable_scroll_bar = true,
-    -- scrollback_lines = 3500,
-    -- bypass_mouse_reporting_modifiers = 'ALT'
+    enable_scroll_bar = true,
+    scrollback_lines = 3500,
+    bypass_mouse_reporting_modifiers = 'ALT'
 }
