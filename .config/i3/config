@@ -237,3 +237,6 @@ gaps outer 10
 
 # Titlebar colours?
 client.focused #990099 #990099 #fdf6e3 #990099
+
+# Notifications
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
