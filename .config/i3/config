@@ -240,3 +240,10 @@ client.focused #990099 #990099 #fdf6e3 #990099
 
 # Notifications
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+# Lock screen
+exec --no-startup-id xss-lock -- i3lock -n -i ~/Pictures/Tree_1920x1080.png
+bindsym $mod+x exec i3lock
+
+# Multi Monitor
+bindsym $mod+p move workspace to output right

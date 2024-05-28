@@ -31,4 +31,10 @@ fi
 
 [ -f "/home/jm/.ghcup/env" ] && . "/home/jm/.ghcup/env" # ghcup-env
 
+#Display?
+if [ "$DISPLAY" != "" ]
+then
+    xhost +local:
+fi
+
 eval "$(starship init bash)"
