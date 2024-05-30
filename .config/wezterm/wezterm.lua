@@ -41,7 +41,7 @@ return {
     audible_bell = 'Disabled',
 
     -- scroll options 
-    enable_scroll_bar = true,
+    enable_scroll_bar = false,
     scrollback_lines = 3500,
     bypass_mouse_reporting_modifiers = 'ALT'
 }
