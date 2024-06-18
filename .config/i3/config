@@ -245,7 +245,7 @@ no_focus [class="plasmashell" window_type="notification"]
 for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 
 # Background
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/liswall.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/liswall.jpg
 #exec --no-startup-id nitrogen --restore
 
 # Trasparency
