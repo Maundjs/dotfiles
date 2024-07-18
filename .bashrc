@@ -24,6 +24,9 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias remove="sudo pacman -R"
 alias autoremove="sudo pacman -Rns"
 
+# alias
+alias cls=clear
+
 # Automatically open tmux on Konsole start
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
@@ -37,4 +40,6 @@ then
     xhost +local:
 fi
 
+eval clear
 eval "$(starship init bash)"
+eval fortune | cowsay
