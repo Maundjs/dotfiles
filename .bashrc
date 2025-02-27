@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 
 #Display ISO version and distribution information in short
 alias version="sed -n 1p /etc/os-release && sed -n 11p /etc/os-release && sed -n 12p /etc/os-release"
@@ -25,7 +25,11 @@ alias remove="sudo pacman -R"
 alias autoremove="sudo pacman -Rns"
 
 # alias
-alias cls=clear
+alias cls="clear"
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+alias wallpaper="feh --bg-fill ~/Pictures/wallpapers/liswall.jpg"
 
 # Automatically open tmux on Konsole start
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
@@ -41,5 +45,5 @@ then
 fi
 
 eval clear
-eval "$(starship init bash)"
 eval fortune | cowsay
+eval "$(starship init bash)"
