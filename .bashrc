@@ -30,6 +30,8 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias wallpaper="feh --bg-fill ~/Pictures/wallpapers/liswall.jpg"
+alias dock="autorandr --load dock && wallpaper"
+alias undock="autorandr --load nodock && wallpaper"
 
 # Automatically open tmux on Konsole start
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
