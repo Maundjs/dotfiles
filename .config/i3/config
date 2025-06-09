@@ -285,7 +285,7 @@ bindsym $mod+Shift+s exec --no-startup-id spectacle -br
 bindsym $mod+Shift+Control+Mod1+l exec --no-startup-id firefox linkedin.com
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Control+space floating toggle
 
 # File associations
 # exec export XDG_MENU_PREFIX=plasma- && kbuildsycoca6
