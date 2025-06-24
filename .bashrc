@@ -33,7 +33,7 @@ alias wallpaper="feh --bg-fill ~/Pictures/wallpapers/liswall.jpg"
 alias dock="autorandr --load dock && wallpaper"
 alias undock="autorandr --load nodock && wallpaper"
 
-# Automatically open tmux on Konsole start
+# Automatically open tmux on console start
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
