@@ -1,31 +1,32 @@
--- define common options
-local opts = {
-    noremap = true,      -- non-recursive
-    silent = true,       -- do not show message
-}
+vim.g.mapleader = " "
 
------------------
--- Normal mode --
------------------
+local function map(mode, lhs, rhs)
+    vim.keymap.set(mode, lhs, rhs, { silent = true })
+end
 
--- Hint: see `:h vim.map.set()`
--- Better window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
-vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
-vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
-vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
--- Resize with arrows
--- delta: 2 lines
-vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+-- Save
+map("n", "<leader>w", "<CMD>update<CR>")
 
------------------
--- Visual mode --
------------------
+-- Quit
+map("n", "<leader>q", "<CMD>q<CR>")
 
--- Hint: start visual mode with the same area as the previous area and the same mode
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
+-- NeoTree
+map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+map("n", "<leader>r", "<CMD>Neotree focus<CR>")
+
+-- New Windows
+map("n", "<leader>o", "<CMD>vsplit<CR>")
+map("n", "<leader>p", "<CMD>split<CR>")
+
+-- Window Navigation
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-j>", "<C-w>j")
+
+-- Resize Windows
+map("n", "<C-Left>", "<C-w><")
+map("n", "<C-Right>", "<C-w>>")
+map("n", "<C-Up>", "<C-w>+")
+map("n", "<C-Down>", "<C-w>-")
