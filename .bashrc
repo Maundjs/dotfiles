@@ -46,6 +46,9 @@ then
     xhost +local:
 fi
 
+# PATH
+export PATH=/home/jm/.local/bin:$PATH
+
 eval clear
 eval fortune | cowsay
 eval "$(starship init bash)"

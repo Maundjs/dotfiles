@@ -10,7 +10,8 @@ return {
         require("mason-lspconfig").setup({
             automatic_installation = true,
             ensure_installd = {
-                "rust_analyzer"
+                "rust_analyzer",
+                "powershell_es"
             }
        })
 
@@ -22,7 +23,8 @@ return {
                 "black", -- python formatter
                 "pylint",
                 "eslint_d",
-                "rust_analyzer"
+                "rust_analyzer",
+                "powershell_es"
             },
         })
     end,
