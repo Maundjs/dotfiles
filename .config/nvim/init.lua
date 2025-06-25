@@ -1,5 +1,3 @@
-require('options')
-require('keymaps')
-require('plugins')
-require('colourscheme')
-require('lsp')
+require('maund.options')
+require('maund.keymaps')
+require('maund.lazy')
